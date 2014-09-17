@@ -13,7 +13,8 @@ b_has_expr=`$b expr 1 + 1 2>/dev/null`
 OUT=GPIO-DUMP-
 
 
-$b modprobe user-gpio-drv
+# TODO - make better tests for this
+#$b modprobe user-gpio-drv
 module_gpio=`$b lsmod | $b grep -e user_gpio_drv`
 
 if [ "$module_gpio" = "" ]
